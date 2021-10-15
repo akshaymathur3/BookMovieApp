@@ -181,12 +181,12 @@ const Header = (props) => {
                     </div>}
                 {props.showBookShowButton === "true" && !loggedIn ?
                     <div className="bookshow-button">
-                        <Button variant="contained" onClick={openModalHandler} color="primary">
+                        <Button variant="contained" onClick={openModalHandler} color="primary" name="Book Show">
                             BOOK SHOW</Button>
                     </div> : ""}
                 {props.showBookShowButton === "true" && loggedIn ?
                     <div className="bookshow-button">
-                        <Link to={"/bookshow/" + props.id}><Button variant="contained" color="primary">
+                        <Link to={"/bookshow/" + props.id}><Button variant="contained" color="primary" name="Book Show">
                             BOOK SHOW</Button></Link>
                     </div> : ""}
             </header>
