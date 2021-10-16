@@ -42,9 +42,7 @@
 
 .trailerContainer {
     margin: 16px 0 16px 0 !important;
-
 }
-
 
 .gridTile{
     cursor: pointer;
@@ -84,6 +82,5 @@
     .flex-containerDetails{
         flex-direction: column;
     }
-
 
 }

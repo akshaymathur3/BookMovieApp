@@ -10,6 +10,7 @@ import StarBorderIcon from '@material-ui/icons/StarBorder';
 import { Link } from 'react-router-dom';
 
 
+//Defining Details function
 const Details = (props) => {
     const [movie, setMovie] = useState({
                                                 genres: [],
@@ -43,7 +44,6 @@ const Details = (props) => {
                                                         }]);
 
 
-
     useEffect(() => {
         let dataMovie = null;
         let xhrMovie = new XMLHttpRequest();
@@ -59,7 +59,6 @@ const Details = (props) => {
         xhrMovie.send(dataMovie);
 
     }, []);
-
 
     const artistClickHandler = (url) => {
         window.location = url;

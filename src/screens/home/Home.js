@@ -48,6 +48,8 @@ const styles = theme => ({
     }
 });
 
+
+//Defining Home function
 const Home = (props) => {
     const [movieName, setMovieName] = useState("");
     const [upcomingMovies, setUpcomingMovies] = useState([{}]);
@@ -58,7 +60,6 @@ const Home = (props) => {
     const [artists, setArtists] = useState([]);
     const [releaseDateStart, setReleaseDateStart] = useState("");
     const [releaseDateEnd, setReleaseDateEnd] = useState("");
-
 
     useEffect(() => {
 
@@ -121,7 +122,6 @@ const Home = (props) => {
 
     const movieNameChangeHandler = event => {
         setMovieName(event.target.value);
-
     }
 
     const genreSelectHandler = event => {

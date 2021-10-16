@@ -13,6 +13,8 @@ import PropTypes from 'prop-types';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import { Link } from 'react-router-dom';
 
+
+//Style for Login/Register Modal
 const customStyles = {
     content: {
         top: '50%',
@@ -24,6 +26,7 @@ const customStyles = {
     }
 }
 
+//Setting common property of Login/Register Tab
 const TabContainer = function (props) {
     return (
         <Typography component="div" style={{ padding: 0, textAlign: 'center' }}>
@@ -36,6 +39,8 @@ TabContainer.propTypes = {
     children: PropTypes.node.isRequired
 }
 
+
+//Defining Header function
 const Header = (props) => {
     const [value, setValue] = useState(0);
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -91,13 +96,11 @@ const Header = (props) => {
             }
         };
 
-
         xhrLogin.open("POST", props.baseUrl + "auth/login");
         xhrLogin.setRequestHeader("Authorization", "Basic " + window.btoa(username + ":" + password));
         xhrLogin.setRequestHeader("Content-Type", "application/json");
         xhrLogin.setRequestHeader("Cache-Control", "no-cache");
         xhrLogin.send(dataLogin);
-
     }
 
     const inputUsernameChangeHandler = (e) => {
